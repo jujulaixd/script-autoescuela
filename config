@@ -1,0 +1,524 @@
+Config = {}
+
+Config.DMVSchool = {
+    vector3(240.7489, -1379.575, 33.74177)
+}
+
+Config.Language = "esp"
+
+Config.SpeedMultiplier = 3.6 -- 3.6 for kmh, 2.236936 for mph
+
+Config.MaxErrors = 3 -- Max errors before fail
+
+Config.MarkerSettings = {
+    type = 2,
+    size = vector3(1.0, 1.0, 1.0),
+    color = vector3(255, 255, 255),
+    rotate = false,
+    dump = false
+}
+
+Config.PuntiMinimi = 5 -- Minimum points to pass the theory test
+
+-- ATTENTION: Modifying the id after a user has already obtained a license causes them to be lost
+Config.License = {
+    {
+        label = 'Licencia A',
+        id = 'drive_bike',
+        img = 'bike.png',
+        pricing = {
+            theory = 3000,
+            practice = 4000
+        },
+        vehicle = {
+            model = 'faggio',
+            coords = vector3(231.2591, -1392.982, 30.50785),
+            heading = 144.40260314941,
+            plate = "DMV1"
+        }
+    },
+    {
+        label = 'Licencia B',
+        id = 'drive',
+        img = 'car.png',
+        pricing = {
+            theory = 3000,
+            practice = 4000
+        },
+        vehicle = {
+            model = 'blista',
+            coords = vector3(231.2591, -1392.982, 30.50785),
+            heading = 144.40260314941,
+            plate = "DMV1"
+        }
+    },
+    {
+        label = 'Licencia C',
+        id = 'drive_truck',
+        img = 'truck.png',
+        pricing = {
+            theory = 3000,
+            practice = 4000
+        },
+        vehicle = {
+            model = 'pounder',
+            coords = vector3(231.2591, -1392.982, 30.50785),
+            heading = 144.40260314941,
+            plate = "DMV1"
+        }
+    }
+}
+
+Config.PracticeCoords = {
+    [1] = {
+        {
+            coordinate = vector3(227.1181, -1399.691, 30.1),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(183.7479, -1394.595, 29.05295),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(210.3608, -1327.127, 29.16619),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(217.6466, -1145.248, 29.3349),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(83.13854, -1136.699, 29.15778),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(55.52874, -1248.127, 29.34311),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(82.69904, -1338.678, 29.3447),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(131.4893, -1387.581, 29.28993),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(220.603, -1445.61, 29.24681),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(242.2584, -1536.136, 29.24705),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(301.6448, -1523.68, 29.34156),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(256.1726, -1445.458, 29.24207),
+            speedLimit = 50
+        },
+        {
+            coordinate = vector3(233.427, -1397.215, 30.5071),
+            speedLimit = 50
+        },
+    }
+}
+
+
+Config.Question = {
+    [1] = {
+        {
+            label = "De qué color es la señal de prohibición?",
+            options = {
+                {
+                    label = "Rojo",
+                    correct = true
+                },
+                {
+                    label = "Azul",
+                    correct = false
+                },
+                {
+                    label = "Amarillo",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué indica la señal de tráfico en forma de triángulo?",
+            options = {
+                {
+                    label = "Intersección de tres vías",
+                    correct = false
+                },
+                {
+                    label = "Reducir la velocidad",
+                    correct = true
+                },
+                {
+                    label = "Sentido unico",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué significa una línea continua al borde de la carretera?",
+            options = {
+                {
+                    label = "puede ser superado",
+                    correct = false
+                },
+                {
+                    label = "No rebasar",
+                    correct = true
+                },
+                {
+                    label = "Sólo se permite adelantar por la derecha",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Cuál es el límite de velocidad en una zona urbana?",
+            options = {
+                {
+                    label = "50 km/h",
+                    correct = true
+                },
+                {
+                    label = "70 km/h",
+                    correct = false
+                },
+                {
+                    label = "90 km/h",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué significa la señal de advertencia con una cámara?",
+            options = {
+                {
+                    label = "Aparcamiento",
+                    correct = false
+                },
+                {
+                    label = "Sin zona de aparcamiento",
+                    correct = false
+                },
+                {
+                    label = "Control electrónico de velocidad",
+                    correct = true
+                }
+            }
+        },
+        {
+            label = "Cuál es la distancia mínima de seguridad a mantener con el vehículo de delante?",
+            options = {
+                {
+                    label = "1 metro",
+                    correct = false
+                },
+                {
+                    label = "2 segundos de diferencia",
+                    correct = true
+                },
+                {
+                    label = "0,5 metro",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué debe hacer un conductor al acercarse a un paso a nivel con barreras cerradas?",
+            options = {
+                {
+                    label = "Acelera para cruzar antes de que las barreras se cierren por completo.",
+                    correct = false
+                },
+                {
+                    label = "Cruzar sólo si no llegan trenes",
+                    correct = true
+                },
+                {
+                    label = "Toca la bocina y continúa",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué representa la señal de alto?",
+            options = {
+                {
+                    label = "Reducir",
+                    correct = false
+                },
+                {
+                    label = "Obligación de parar",
+                    correct = true
+                },
+                {
+                    label = "Sentido unico",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué indica el cartel con una flecha verde apuntando hacia arriba?",
+            options = {
+                {
+                    label = "Camino permitido sólo para bicicletas.",
+                    correct = false
+                },
+                {
+                    label = "Camino permitido sólo para peatones.",
+                    correct = true
+                },
+                {
+                    label = "Ruta reservada para vehículos públicos.",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué representa el cartel con un saltire (X roja sobre fondo blanco)?",
+            options = {
+                {
+                    label = "Zona de acceso limitado",
+                    correct = true
+                },
+                {
+                    label = "Zona de aparcamiento permitida",
+                    correct = false
+                },
+                {
+                    label = "Zona de peatones",
+                    correct = false
+                }
+            }
+        }
+    },
+    [2] = {
+        {
+            label = "Qué significa la señal de prohibición de entrada?",
+            options = {
+                {
+                    label = "Obligación de dar prioridad",
+                    correct = false
+                },
+                {
+                    label = "No pasar",
+                    correct = true
+                },
+                {
+                    label = "Adelanto obligatorio",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué debe hacer un conductor al acercarse a una intersección no señalizada?",
+            options = {
+                {
+                    label = "AAcelera para cruzar rápidamente",
+                    correct = false
+                },
+                {
+                    label = "Deténgase, ceda el paso y avance con precaución.",
+                    correct = true
+                },
+                {
+                    label = "Haga sonar la bocina para advertir a otros conductores",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué significa la señal de curva peligrosa a la izquierda?",
+            options = {
+                {
+                    label = "Proximidad a una zona de descanso",
+                    correct = false
+                },
+                {
+                    label = "Presencia de una intersección",
+                    correct = false
+                },
+                {
+                    label = "Presencia de una peligrosa curva a la izquierda",
+                    correct = true
+                }
+            }
+        },
+        {
+            label = "Qué significa la señal de prohibido adelantar?",
+            options = {
+                {
+                    label = "Puedes empezar a adelantar",
+                    correct = true
+                },
+                {
+                    label = "No pares",
+                    correct = false
+                },
+                {
+                    label = "final de la carretera",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué representa la señal de paso de peatones?",
+            options = {
+                {
+                    label = "Cruce permitido sólo para bicicletas.",
+                    correct = false
+                },
+                {
+                    label = "Prohibición de cruce para peatones",
+                    correct = false
+                },
+                {
+                    label = "Punto por donde los peatones pueden cruzar con seguridad",
+                    correct = true
+                }
+            }
+        },
+        {
+            label = "Qué indica la señal de fin de zona de tráfico limitado?",
+            options = {
+                {
+                    label = "Inicio de una zona de tráfico restringido",
+                    correct = false
+                },
+                {
+                    label = "Fin de una zona de aparcamiento",
+                    correct = false
+                },
+                {
+                    label = "Fin de la zona donde están vigentes las restricciones de acceso",
+                    correct = true
+                }
+            }
+        },
+        {
+            label = "Qué representa la señal de tráfico de vehículos prohibidos a motor?",
+            options = {
+                {
+                    label = "Obligación de dar prioridad",
+                    correct = false
+                },
+                {
+                    label = "Prohibición de tránsito sólo para camiones",
+                    correct = false
+                },
+                {
+                    label = "Prohibición de tránsito para todos los vehículos de motor.",
+                    correct = true
+                }
+            }
+        },
+        {
+            label = "Qué debe hacer un conductor cuando se acerca a un semáforo con una luz amarilla intermitente?",
+            options = {
+                {
+                    label = "Acelere para rebasar antes de que cambie la señal.",
+                    correct = false
+                },
+                {
+                    label = "Deténgase sólo si hay vehículos cruzando la intersección.",
+                    correct = true
+                },
+                {
+                    label = "Continuar sin bajar el ritmo",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué significa la señal de prohibición de entrada a peatones?",
+            options = {
+                {
+                    label = "Prohibición de tránsito sólo para ciclistas",
+                    correct = false
+                },
+                {
+                    label = "Prohibido el tránsito solo para peatones",
+                    correct = true
+                },
+                {
+                    label = "Obligación de cruzar únicamente en bicicleta",
+                    correct = false
+                }
+            }
+        },
+        {
+            label = "Qué indica la señal de prohibido rebasar a vehículos remolcadores?",
+            options = {
+                {
+                    label = "Prohibición de tránsito sólo para campistas",
+                    correct = false
+                },
+                {
+                    label = "Prohibición de paso a vehículos remolcados",
+                    correct = true
+                },
+                {
+                    label = "Obligación de arrastrar un remolque",
+                    correct = false
+                }
+            }
+        }
+    }
+}
+
+Config.Lang = {
+    ['it'] = {
+        ['speed_error'] = "Vas demasiado rápido, Reduce!",
+        ['open_dmv'] = "Premi ~INPUT_CONTEXT~ abrir la escuela de manejo",
+        ['dmv'] = "AUTOESCUELA",
+        ['point'] = "PUNTAJE",
+        ['error'] = "ERRORES",
+        ['ok'] = "Avanti",
+        ['start_theory'] = "Comienza el examen teórico",
+        ['theory_before'] = "Haz el examen teórico",
+        ['start_practice'] = "Comienza la prueba de práctica",
+        ['test_passed'] = "Prueba aprobada!",
+        ['already_done'] = "Ya has realizado esta prueba!",
+        ['theory_success'] = "Felicitaciones, pasaste el examen teórico, vuelve pronto para el examen práctico.!",
+        ['theory_error'] = "Lamentamos comunicarte que no pasaste el examen teórico, no te rindas, vuelve pronto mejor preparado y vuelve a realizar el examen.!",
+        ['practice_success'] = "Felicitaciones, ha pasado el examen práctico, ahora es un conductor con licencia.!",
+        ['practice_error'] = "Lamentamos comunicarte que no pasaste la prueba práctica, no te rindas, vuelve pronto mejor preparado y vuelve a realizar la prueba.!",
+        ['money_error'] = "No tienes suficiente dinero para realizar esta prueba.! Los extrañas %s€"
+    },
+    ['en'] = {
+        ['speed_error'] = "You are going too fast, slow down!",
+        ['open_dmv'] = "Press ~INPUT_CONTEXT~ to open the DMV",
+        ['dmv'] = "DMV SCHOOL",
+        ['point'] = "POINT",
+        ['error'] = "ERROR",
+        ['ok'] = "Ok",
+        ['start_theory'] = "Start the Theory Test",
+        ['theory_before'] = "Take the theory test",
+        ['start_practice'] = "Start the Practice Test",
+        ['test_passed'] = "Test Passed!",
+        ['already_done'] = "You have already done!",
+        ['theory_success'] = "Congratulations, you passed the theory test, come back soon for the practical test!",
+        ['theory_error'] = "We are sorry to inform you that you did not pass the theory test, do not give up, come back soon more prepared and try the test again!",
+        ['practice_success'] = "Congratulations, you passed the practical test, you are now a licensed driver!",
+        ['practice_error'] = "We are sorry to inform you that you did not pass the practical test, do not give up, come back soon more prepared and try the test again!",
+        ['money_error'] = "You don't have enough money to do this test! You are missing %s€"
+    }
+}
+
+-- Functions --
+
+onCompleteTheory = function(license)
+    TriggerServerEvent('ricky-dmv:givelicense', license) -- Give license to sql
+end
+
+onCompletePractice = function(license)
+    TriggerServerEvent('ricky-dmv:givelicense', license) -- Give license to sql
+end
